@@ -3,18 +3,43 @@ test
 
 George Shen, Allen Gao, Nicholas Song
 Mention team member’s lead roles: setup, software, networking, writing, research, algorithm design
+
 **MOTIVATION**
+Due to the necessity of time synchronization for many modern networked embedded systems, these devices need to have a method of communication in order to 
+synchronize their time successfully. However, synchronizing time is very challenging on most embedded devices due to resource constraints, which means that
+most traditional time synchronization methods are a significant burden on the devices. A solution to this problem is that since a lot of these devices have 
+sensors built in that send periodic sensing data to servers, and by using the time-stamped data in the servers, it is possible to synchronize devices together.
 
 DESIGN GOAL
+Create a time synchronization protocol using timestamped sensor data from two embedded systems (sensors) on an edge device, where the data is sent to the Raspberry Pi, 
+which then initiates the protocol to synchronize the timing of the two different sensors based on a common synchronizing event that they record (ex. temperature/audio/vibrations)
 
 DELIVERABLES
+It should characterize the internet delay from the Raspberry Pi and the Edge device. The system should be able to estimate the relative clock drift and correct it between the participating devices. 
+In addition, the sensor(s) data from the edge device should be sent to the Raspberry Pi, where it will use a common factor to determine the time and synchronize both sensors together. 
+We currently want to base this on temperature.
 
 SYSTEM BLOCKS
 
 HW/SW REQUIREMENTS
+The hardware required is the Raspberry Pi, two sensors such as thermometer/microphone/camera (not sure what event to synchronize time yet), and the ESP32 to establish wifi/Bluetooth. 
+The software required for this project would need C++ as its firmware. It would require the Timer capture and timekeeping API.
 
 TEAM MEMBER RESPONSIBILITIES
+Allen Gao - algorithm design/software
+Nick - writing/networking
+George Shen- research/setup
 
 PROJECT TIMELINE
+9/28 → GitHub repository report
+10/15 → Establish hardware and design a basic setup for the experiment, characterize the network delay we will use to establish timing synchronization (can either try something audio-based, car too annoying to test, maybe even based on an item in the camera frame)
+11/01 → finish initial software development and run initial tests. We will probably use microphones, but after that initial testing happens where a certain sound is recorded which 
+11/16 → work out any errors and process additional tests
+12/01 → fully finish project
+12/06 → presentations
 
 REFERENCES
+Nasrullah, Adeel, and Fatima Anwar. “HAEST: Harvesting Ambient Events to Synchronize Time across Heterogeneous IOT Devices | IEEE Conference Publication | IEEE Xplore.” IEEXplore, ieeexplore.ieee.org/document/10568057. Accessed 27 Sept. 2025. 
+
+Automated Synchronization of Driving Data Using Vibration and Steering Events
+Sandha, Sandeep, et al. “Exploiting Smartphone Peripherals for Precise Time Synchronization | IEEE Conference Publication | IEEE Xplore.” IEEEExplore, ieeexplore.ieee.org/document/8886639. Accessed 27 Sept. 2025. 

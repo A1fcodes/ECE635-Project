@@ -22,13 +22,13 @@ We currently want to base this on temperature.
 SYSTEM BLOCKS
 Sensor 1,2: Vibration, audio, LED Flash
 Edge Devices 1,2: Sensor drivers, Local clock, timestamping, uplink transmitter(via Wifi/Bluetooth)
-Network Link
+Network Link:
 Wireless transport between devices and the  Raspberry Pi
-Raspberry PI
+Raspberry PI:
 Receive the packets from the edge devices, sync engine/controller, drift/offset estimator, correlator, and command transmitter
-Control Channel(Raspberry Pi-> Devices)
+Control Channel(Raspberry Pi-> Devices):
 Send commands to the devices
-Storage
+Storage:
 Raw logs and export
 
 

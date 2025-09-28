@@ -20,6 +20,17 @@ In addition, the sensor(s) data from the edge device should be sent to the Raspb
 We currently want to base this on temperature.
 
 SYSTEM BLOCKS
+Sensor 1,2: Vibration, audio, LED Flash
+Edge Devices 1,2: Sensor drivers, Local clock, timestamping, uplink transmitter(via Wifi/Bluetooth)
+Network Link
+Wireless transport between devices and the  Raspberry Pi
+Raspberry PI
+Receive the packets from the edge devices, sync engine/controller, drift/offset estimator, correlator, and command transmitter
+Control Channel(Raspberry Pi-> Devices)
+Send commands to the devices
+Storage
+Raw logs and export
+
 
 HW/SW REQUIREMENTS
 The hardware required is the Raspberry Pi, two sensors such as thermometer/microphone/camera (not sure what event to synchronize time yet), and the ESP32 to establish wifi/Bluetooth. 

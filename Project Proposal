@@ -44,7 +44,7 @@ George Shen- research/setup
 PROJECT TIMELINE
 9/28 → GitHub repository report
 10/15 → Establish hardware and design a basic setup for the experiment, characterize the network delay we will use to establish timing synchronization (can either try something audio-based, car too annoying to test, maybe even based on an item in the camera frame)
-11/01 → finish initial software development and run initial tests. We will probably use microphones, but after that initial testing happens where a certain sound is recorded which 
+11/01 → finish initial software development and run initial tests. We will probably use microphones, but after that initial testing happens where a certain sound is recorded and then they will time it on the server before synchronizing with either the sensors or edge device
 11/16 → work out any errors and process additional tests
 12/01 → fully finish project
 12/06 → presentations
